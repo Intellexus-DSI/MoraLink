@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "moralink"
+version = "1.0.0"
+description = "MoraLink: moral-to-fable retrieval benchmark and evaluation code"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "huggingface-hub>=0.28",
+  "numpy>=1.26",
+  "pyyaml>=6.0",
+  "sentence-transformers>=3.4",
+  "torch>=2.4",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+analysis = ["pandas>=2.2", "scikit-learn>=1.5"]
+training = ["datasets>=3.2", "peft>=0.14", "transformers>=4.48"]
+llm = ["openai>=1.60", "google-genai>=1.0"]
+dev = ["pytest>=8.3", "pytest-cov>=6.0", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/moralink"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

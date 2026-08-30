@@ -1,0 +1,37 @@
+section,model,setting,comparison,MRR@10,MRR@10_std,MAP@10,MAP@10_std,Recall@10,Recall@10_std,delta_MRR@10,delta_MRR@10_pct,delta_MAP@10,delta_MAP@10_pct,delta_Recall@10,delta_Recall@10_pct,selected_eval_config,summary_generator,seeds,seed_count
+aggregate,,STORAL,,0.366876,0.001536,0.311382,0.002842,0.462542,0.005942,,,,,,,,,"42,43,44",3
+aggregate,,Synthetic,,0.346958,0.001781,0.29249,0.002205,0.431112,0.004448,,,,,,,,,"42,43,44",3
+aggregate,,Synthetic + STORAL,,0.363118,0.009491,0.308018,0.008764,0.458881,0.009494,,,,,,,,,"42,43,44",3
+aggregate,,Synthetic → STORAL,,0.368169,0.004987,0.314549,0.004446,0.466227,0.004626,,,,,,,,,"42,43,44",3
+aggregate,,Zero-shot,,0.314573,0.0,0.248287,0.0,0.416108,0.0,,,,,,,,,zero_shot,1
+delta,,,STORAL vs Synthetic,,,,,,,0.019918,5.7,0.018892,6.5,0.03143,7.3,,,,
+delta,,,STORAL vs Zero-shot,,,,,,,0.052303,16.6,0.063096,25.4,0.046435,11.2,,,,
+delta,,,Synthetic + STORAL vs Synthetic → STORAL,,,,,,,-0.005051,-1.4,-0.006531,-2.1,-0.007346,-1.6,,,,
+delta,,,Synthetic + STORAL vs Zero-shot,,,,,,,0.048546,15.4,0.059731,24.1,0.042773,10.3,,,,
+delta,,,Synthetic vs Zero-shot,,,,,,,0.032385,10.3,0.044203,17.8,0.015004,3.6,,,,
+delta,,,Synthetic → STORAL vs STORAL,,,,,,,0.001293,0.4,0.003167,1.0,0.003684,0.8,,,,
+per_model,BGE-M3,STORAL,,0.317001,0.006761,0.267743,0.005931,0.405439,0.015061,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,BGE-M3,Synthetic,,0.29554,0.002641,0.24412,0.003577,0.366796,0.001391,,,,,,,direct_moral_fable,gemini,"42,43,44",3
+per_model,BGE-M3,Synthetic + STORAL,,0.305262,0.023707,0.252203,0.021764,0.395097,0.028217,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,BGE-M3,Synthetic → STORAL,,0.308585,0.020063,0.26015,0.018276,0.400936,0.023911,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,BGE-M3,Zero-shot,,0.304248,0.0,0.236498,0.0,0.400923,0.0,,,,,,,fable_direct_moral,gemini,zero_shot,1
+per_model,Instructor-XL,STORAL,,0.426806,0.000969,0.366119,0.001167,0.541895,0.005058,,,,,,,direct_moral_fable,gemini,"42,43,44",3
+per_model,Instructor-XL,Synthetic,,0.404833,0.008516,0.345059,0.009356,0.499576,0.016229,,,,,,,direct_moral_fable,gemini,"42,43,44",3
+per_model,Instructor-XL,Synthetic + STORAL,,0.429718,0.001318,0.369178,0.000995,0.537862,0.001036,,,,,,,direct_moral_fable,gemini,"42,43,44",3
+per_model,Instructor-XL,Synthetic → STORAL,,0.433164,0.004104,0.372636,0.003937,0.544873,0.004362,,,,,,,direct_moral_fable,gemini,"42,43,44",3
+per_model,Instructor-XL,Zero-shot,,0.327356,0.0,0.263886,0.0,0.434007,0.0,,,,,,,fable_direct_moral,gemini,zero_shot,1
+per_model,MiniLM-L6,STORAL,,0.256792,0.002154,0.203643,0.00238,0.306678,0.006613,,,,,,,cot_proverb_fable,gemini,"42,43,44",3
+per_model,MiniLM-L6,Synthetic,,0.257678,0.002585,0.206598,0.001833,0.308258,0.002439,,,,,,,direct_moral_only,gemini,"42,43,44",3
+per_model,MiniLM-L6,Synthetic + STORAL,,0.241457,0.004004,0.191703,0.002185,0.299821,0.003034,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,MiniLM-L6,Synthetic → STORAL,,0.254517,0.006135,0.203566,0.004492,0.308196,0.005718,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,MiniLM-L6,Zero-shot,,0.207945,0.0,0.153684,0.0,0.278992,0.0,,,,,,,fable_direct_moral,gemini,zero_shot,1
+per_model,Qwen3-0.6B,STORAL,,0.369999,0.005663,0.315563,0.006397,0.471507,0.011081,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-0.6B,Synthetic,,0.350692,0.015037,0.295494,0.013557,0.434631,0.020618,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-0.6B,Synthetic + STORAL,,0.378893,0.012731,0.31773,0.015438,0.476401,0.012883,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-0.6B,Synthetic → STORAL,,0.380338,0.002561,0.326379,0.0029,0.477682,0.007535,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-0.6B,Zero-shot,,0.348204,0.0,0.273805,0.0,0.456163,0.0,,,,,,,fable_direct_moral,gemini,zero_shot,1
+per_model,Qwen3-4B,STORAL,,0.463781,0.008115,0.403845,0.008259,0.587192,0.013804,,,,,,,fable_conceptual_abstract,gemini,"42,43,44",3
+per_model,Qwen3-4B,Synthetic,,0.426048,0.008939,0.371178,0.006315,0.546299,0.00996,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-4B,Synthetic + STORAL,,0.460261,0.009557,0.409274,0.007011,0.585221,0.005312,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-4B,Synthetic → STORAL,,0.464242,0.013579,0.410015,0.012045,0.599447,0.001647,,,,,,,fable_direct_moral,gemini,"42,43,44",3
+per_model,Qwen3-4B,Zero-shot,,0.385111,0.0,0.313561,0.0,0.510454,0.0,,,,,,,fable_direct_moral,gemini,zero_shot,1

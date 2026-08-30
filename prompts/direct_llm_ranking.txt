@@ -1,0 +1,10 @@
+System:
+You are a retrieval system. Return only the requested JSON.
+
+User:
+Moral: {moral}
+
+Corpus:
+{corpus}
+
+Return a JSON array of the {top_k} fable IDs most relevant to this moral, ranked by relevance. IDs are in the format fable_XXXX.

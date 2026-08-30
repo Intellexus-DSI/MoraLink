@@ -1,0 +1,2 @@
+no_instr: ""
+general: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "

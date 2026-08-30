@@ -1,0 +1,54 @@
+strategy: mixed
+seeds: [42, 43, 44]
+epochs: 10
+early_stopping_patience: 3
+validation_ratio: 0.10
+temperature: 0.05
+expected_counts:
+  storal_pairs: 1595
+  synthetic_pairs: 1520
+  synthetic_morals: 95
+  fables_per_moral: 16
+stages:
+  - source: mixed
+models:
+  MiniLM-L6:
+    model_id: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 16
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+  BGE-M3:
+    model_id: BAAI/bge-m3
+    batch_size: 8
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+  Qwen3-0.6B:
+    model_id: Qwen/Qwen3-Embedding-0.6B
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    lora: {r: 64, alpha: 128, dropout: 0.05, target_modules: [q_proj, k_proj, v_proj, o_proj]}
+  Instructor-XL:
+    model_id: hkunlp/instructor-xl
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    lora: {r: 16, alpha: 32, dropout: 0.05, target_modules: all-linear}
+  Qwen3-4B:
+    model_id: Qwen/Qwen3-Embedding-4B
+    batch_size: 2
+    gradient_accumulation_steps: 8
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    lora: {r: 64, alpha: 128, dropout: 0.05, target_modules: [q_proj, k_proj, v_proj, o_proj]}

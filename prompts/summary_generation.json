@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "user_prompt_template": "Fable: {fable}",
+  "prompt_groups": {
+    "gemini": {
+      "generation_script": "experiments/07_sota_summarization_oracle/generate_summaries.py",
+      "generation_script_commit": "dd5fbd12bfd5d5bc917f93628f06af637caf734d",
+      "generation_script_sha256_at_commit": "929d91513b3c961fd9826625f058ac17a2203128625981495b12a5c2aa710d76",
+      "system_prompts": {
+        "direct_moral": "You are an expert in fables, parables, and moral philosophy. When given a fable, extract its moral lesson as a single sentence. Be as concise as possible.",
+        "conceptual_abstract": "You are a moral philosopher. When given a fable, reason step by step:\n1. What is the central conflict or situation?\n2. What does the outcome reveal about human nature?\n3. What abstract principle does this illustrate?\n\nAfter reasoning, output ONLY the abstract moral principle as a single sentence on the last line. Do NOT include your reasoning in the output. Be as concise as possible.",
+        "cot_proverb": "You are an expert in fables and proverbs. When given a fable, reason step by step:\n1. What is the central conflict or situation?\n2. What does the outcome reveal about human nature?\n3. What abstract principle does this illustrate?\n\nAfter reasoning, state the moral as a proverb or maxim. Output ONLY the proverb on the last line. Do NOT include your reasoning in the output. Be as concise as possible.",
+        "proverb": "You are an expert in fables and proverbs. When given a fable, state its moral as a proverb or maxim. Be as concise as possible."
+      },
+      "generation_settings": {
+        "explicit_api_fields": {
+          "system_instruction": "The selected system prompt"
+        },
+        "temperature": "provider default, not set in the generation script",
+        "top_p": "provider default, not set in the generation script",
+        "top_k": "provider default, not set in the generation script",
+        "seed": "not set",
+        "maximum_output_tokens": "provider default, not set in the generation script",
+        "maximum_retries": 5,
+        "postprocessing": "response.text.strip()"
+      }
+    },
+    "gemma4": {
+      "generation_script": "experiments/09_gemma4_summarization/generate_summaries.py",
+      "generation_script_commit": "47413e0fc45238c8f877716beba88c91a356f967",
+      "generation_script_sha256_at_commit": "8f91b45f94d26d9bca2ddfb581434f99173088d420982bd6c19d3a47f27a8847",
+      "system_prompts": {
+        "direct_moral": "You are an expert in fables, parables, and moral philosophy. When given a fable, extract its moral lesson as a single sentence. Be as concise as possible.",
+        "conceptual_abstract": "You are a moral philosopher. When given a fable, reason step by step:\n1. What is the central conflict or situation?\n2. What does the outcome reveal about human nature?\n3. What abstract principle does this illustrate?\n\nAfter reasoning, output ONLY the abstract moral principle as a single sentence on the last line. Do NOT include your reasoning in the output. Do NOT add any label or prefix. Be as concise as possible.",
+        "cot_proverb": "You are an expert in fables and proverbs. When given a fable, reason step by step:\n1. What is the central conflict or situation?\n2. What does the outcome reveal about human nature?\n3. What abstract principle does this illustrate?\n\nAfter reasoning, state the moral as a proverb or maxim. Output ONLY the proverb on the last line. Do NOT include your reasoning in the output. Be as concise as possible."
+      },
+      "generation_settings": {
+        "backend": "mlx-lm 0.31.2 at git commit 4469ad464702a66ad49d5aade1c85fa2d42c8251",
+        "maximum_new_tokens": 150,
+        "temperature": "mlx-lm default, not set in the generation script",
+        "top_p": "mlx-lm default, not set in the generation script",
+        "top_k": "mlx-lm default, not set in the generation script",
+        "seed": "not set",
+        "chat_template": "tokenizer.apply_chat_template with add_generation_prompt=true",
+        "postprocessing": "Remove <think> blocks; use the first non-empty line for direct_moral and the last non-empty line for the other variants."
+      }
+    }
+  }
+}

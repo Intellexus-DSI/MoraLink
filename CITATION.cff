@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use MoraLink, please cite the paper and the software release."
+type: software
+title: "MoraLink: Bridging Morals and Narrative Fables for Retrieval"
+version: 1.0.0
+date-released: 2026-08-30
+repository-code: "https://github.com/Intellexus-DSI/MoraLink"
+repository-artifact: "https://huggingface.co/datasets/Intellexus/MoraLink"
+url: "https://openreview.net/forum?id=wpUUxOAzZY"
+license: Apache-2.0
+authors:
+  - given-names: Lior
+    family-names: Livyatan
+    email: lior.livyatan@post.runi.ac.il
+    affiliation: "Data Science Institute and Efi Arazi School of Computer Science, Reichman University, Herzliya, Israel"
+  - given-names: Kai
+    family-names: Golan Hashiloni
+    email: kai.golanhashiloni@post.runi.ac.il
+    affiliation: "Data Science Institute and Efi Arazi School of Computer Science, Reichman University, Herzliya, Israel"
+  - given-names: Asif
+    family-names: Amar
+    email: asif.amar@post.runi.ac.il
+    affiliation: "Data Science Institute and Efi Arazi School of Computer Science, Reichman University, Herzliya, Israel"
+  - given-names: Roei
+    family-names: Rahamim
+    email: roei.rahamim@post.runi.ac.il
+    affiliation: "Data Science Institute and Efi Arazi School of Computer Science, Reichman University, Herzliya, Israel"
+  - given-names: Kfir
+    family-names: Bar
+    email: kfir.bar@runi.ac.il
+    affiliation: "Data Science Institute and Efi Arazi School of Computer Science, Reichman University, Herzliya, Israel"
+preferred-citation:
+  type: article
+  title: "MoraLink: Bridging Morals and Narrative Fables for Retrieval"
+  year: 2026
+  url: "https://openreview.net/forum?id=wpUUxOAzZY"
+  authors:
+    - given-names: Lior
+      family-names: Livyatan
+    - given-names: Kai
+      family-names: Golan Hashiloni
+    - given-names: Asif
+      family-names: Amar
+    - given-names: Roei
+      family-names: Rahamim
+    - given-names: Kfir
+      family-names: Bar

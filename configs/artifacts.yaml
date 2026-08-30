@@ -1,0 +1,43 @@
+fables:
+  path: data/fables.json
+  sha256: 71f03ae98755af2a7cfc4c747f99d589938ea0c27a72e40a017e0063d0d9793f
+  count: 709
+queries:
+  path: data/queries.json
+  sha256: 1fe2dcef99bed5417d5ff38ebb0f22ba1ec527afdabbd9bc2ff41ec7b0b5078b
+  count: 668
+qrels:
+  path: data/qrels.json
+  sha256: e961bf374c940ccec3752da1d47ed18ba7797f8e594d16497c8e5654809df619
+group_mapping:
+  path: data/clusters.json
+  sha256: f0befd1d9a30391d4eacb6568196110ee196fcf492ba447d5ebfb759063c6ef6
+  count: 558
+summaries_gemini:
+  path: summaries/gemini-3-flash.json
+  sha256: eb98eafa296baa8e127df3c8d288a88bedbd70520d9a3b9d9e5ee86425a4482b
+  count: 709
+summaries_gemma_e2b:
+  path: summaries/gemma-4-e2b.json
+  sha256: 18a77feaec697fa2ff05d0beac6fa9ac20cd3987f7aff500827387aa36436f87
+  count: 709
+summaries_gemma_e4b:
+  path: summaries/gemma-4-e4b.json
+  sha256: 2fb9eb7de5418c3efb0c7ce99e6c347ae35f25667bee98d6f7f7865abbc38cbe
+  count: 709
+summaries_gemma_31b:
+  path: summaries/gemma-4-31b.json
+  sha256: aacacd2c71ec0e9e7407702e5e483ee48807a1c2c332e203b2ef38df12b30517
+  count: 709
+rankings_manifest:
+  path: rankings/manifest.json
+  count: 144
+  count_field: rankings
+paper_metric_contributions:
+  path: analysis/per_query_paper_metrics.csv.gz
+  sha256: 93fe0fe0ff263d3711b1cbda67a635235572463422b3e6099dda75c1933b2198
+  count: 96192
+word_overlap_rank_changes:
+  path: analysis/word_overlap_rank_changes.csv.gz
+  sha256: b57ca059bcdc864c715f8a161e68c5e40f8c4ca301c4b2bf5b5637b1d8e9516a
+  count: 106212

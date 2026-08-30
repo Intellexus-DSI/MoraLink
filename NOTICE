@@ -1,0 +1,19 @@
+MoraLink
+Copyright 2026 Lior Livyatan, Kai Golan Hashiloni, Asif Amar,
+Roei Rahamim, and Kfir Bar.
+
+This work was supported by Intellexus.
+
+The benchmark fables and original morals come from MORABLES by Matteo
+Marcuzzo, Alessandro Zangari, Andrea Albarelli, Jose Camacho-Collados,
+and Mohammad Taher Pilehvar:
+https://huggingface.co/datasets/cardiffnlp/Morables
+
+The MORABLES dataset card identifies that dataset as CC BY-NC 4.0. The
+MoraLink benchmark data and generated summary artifacts are therefore
+distributed separately under CC BY-NC 4.0. The Apache 2.0 LICENSE file
+applies to the code, prompts, configurations, and original documentation.
+
+The release includes fixed text generated using Gemini 3 Flash and Gemma 4
+models. It does not include model weights. Each model and service remains
+subject to its provider's terms.
